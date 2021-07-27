@@ -2149,11 +2149,11 @@ seat_assigned[person_order==&quot;Xiaohan Wang&quot;] &lt;- 14
 seat_assigned[person_order==&quot;Thomas Nolan Whitehead&quot;] &lt;- 2
 seat_assigned[person_order==&quot;Hantao Wu&quot;] &lt;- 3
 
-excluded &lt;- c(1,14,16)
+drop &lt;- c(1,14,16) # Found out after starting that they won&#39;t need a seat
 
-knitr::kable(cbind.data.frame(&quot;Order&quot;=(1:length(person_order))[-excluded],
-                              &quot;Person&quot;=person_order[-excluded],
-                              &quot;Seat&quot;=seat_assigned[-excluded]),
+knitr::kable(cbind.data.frame(&quot;Order&quot;=(1:length(person_order))[-drop],
+                              &quot;Person&quot;=person_order[-drop],
+                              &quot;Seat&quot;=seat_assigned[-drop]),
              format = &quot;html&quot;, booktabs = F, linesep = &quot;&quot;, align=&quot;lcr&quot;)</code></pre>
 
 
